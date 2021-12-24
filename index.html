@@ -7,6 +7,9 @@
         <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Robotot+Slab&family=Kanit">
 
+        <link type="text/css" rel="stylesheet" href="magicscroll/magicscroll.css"/>
+        <script type="text/javascript" src="magicscroll/magicscroll.js"></script>  
+
         <style>
             /* Resources used
             *
@@ -15,7 +18,7 @@
 
             :root {
                 --darkBlue: #10073D; /*Looted*/
-                --lightblue: #1CE; /*Ice*/
+                --lightBlue: #1CE; /*Ice*/
                 --purple: #53A;  /*Sea*/
                 --blurple: #5A17ED; /*Salted*/
                 --white: #ACE; /*Ace*/
@@ -44,7 +47,7 @@
 
             h1 {
                 font-family: 'Kanit', sans-serif;
-                color: var(--lightblue);
+                color: var(--lightBlue);
             }
 
             h2 {
@@ -179,6 +182,20 @@
                 font-size: 400%;
                 margin-bottom: 0;
             }
+
+            /* magicscroll overwrites */
+
+            div.mcs-bullet {
+                background-color: var(--white);
+            }
+
+            div.mcs-bullet.active {
+                border-color: var(--darkBlue);
+            }
+
+            div.mcs-bullet:hover {
+                background-color: var(--darkBlue);
+            }
         </style>
     </head>
 
@@ -209,7 +226,11 @@
                 <br>
                 <b><u>Work in progress</u></b> - Play and level up to unlock special profile card backgrounds, titles and badges to have the most unique card out there.<br>
                 The only games currently available to play are 2048 and Minesweeper with hopefully more to come.</p>
-                <p>!Rememember to add screenshots!</p>
+                <div class="MagicScroll" data-options="items: 1; height:500px; pagination: true; keyboard: true">
+                    <a><img src="img/game-bot/2048.png"/></a>
+                    <a><img src="img/game-bot/minesweeper.png"></a>
+                    <a><img src="img/game-bot/profileCard.png"/></a>
+                </div>
 
                 <a href= "https://github.com/sopyb/Discord_TV"><h2>Disocrd TV</h2></a>
                 <p>There is no Discord app for Android TV so I decided to make my own worked out the QR authentification process by looking at the minified javascript from the desktop client and ported the code over to kotlin and implemented it into the app, before realizing the app would be breaking Discord's ToS.</p>
