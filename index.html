@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Coming soon...</title>
+        <title>Sopy's portofolio</title>
 
         <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Robotot+Slab&family=Kanit">
@@ -15,8 +15,8 @@
 
             :root {
                 --darkBlue: #10073D; /*Looted*/
-                --blue: #007;  /*James Bond*/
                 --lightblue: #1CE; /*Ice*/
+                --purple: #53A;  /*Sea*/
                 --blurple: #5A17ED; /*Salted*/
                 --white: #ACE; /*Ace*/
             }
@@ -27,9 +27,19 @@
                 to   { transform: translate(0, 0vh); }    
             }
 
+            a {
+                text-decoration: none;
+            }
+
             body {
                 margin: 0%;
                 font-family: 'Roboto Slab', sans-serif;
+            }
+
+            h1,
+            h2,
+            ul {
+                margin-top: 0px;
             }
 
             h1 {
@@ -41,15 +51,16 @@
                 color: var(--blurple);
             }
 
-            p {
+            p, li {
                 color: var(--white);
+                font-weight: 600;
             }
 
             .diamond {
                 width: 0;
                 height: 0;
                 border: 15vw solid transparent;
-                border-bottom-color: var(--blue);
+                border-bottom-color: var(--purple);
                 position: relative;
             }
 
@@ -61,7 +72,7 @@
                 width: 0;
                 height: 0;
                 border: 15vw solid transparent;
-                border-top-color: var(--blue);
+                border-top-color: var(--purple);
             }
 
             .center {
@@ -76,6 +87,10 @@
                 top: 50%;
                 left: 0%;
                 transform: translate(0%, -50%);
+            }
+
+            .content {
+                padding: 10%;
             }
 
             .float {
@@ -99,7 +114,7 @@
                 top: 0;
                 width: 10vw;
                 height: 16vw;
-                background: var(--blue);
+                background: var(--purple);
                 border-radius: 10vw 10vw 0 0;
                 transform: rotate(-45deg);
                 transform-origin: 0 100%;
@@ -115,9 +130,9 @@
                 width: 0px;
                 height: 0px;
                 border-right: 20vw solid transparent;
-                border-top: 20vw solid var(--blue);
-                border-left: 20vw solid var(--blue);
-                border-bottom: 20vw solid var(--blue);
+                border-top: 20vw solid var(--purple);
+                border-left: 20vw solid var(--purple);
+                border-bottom: 20vw solid var(--purple);
                 border-top-left-radius: 20vw;
                 border-top-right-radius: 20vw;
                 border-bottom-left-radius: 20vw;
@@ -127,10 +142,11 @@
             .panel {
                 position: relative;
                 width: 100vw;
-                height: 100vh;
+                min-height: 100vh;
                 max-width: 100%;
                 overflow: hidden;
                 object-position: 50% 50%;
+                background-color: var(--purple);
             }
 
             .shape {
@@ -154,17 +170,13 @@
             }
 
             #topPanel {
+                height: 100vh;
                 background-color: var(--darkBlue);
                 align-items: center;
             }
 
             #topPanel h1 {
                 font-size: 400%;
-            }
-
-            #topPanel h1,
-            #topPanel h2{
-                margin-top: 0px;
                 margin-bottom: 0px;
             }
         </style>
@@ -183,7 +195,36 @@
         </div>
 
         <div class="panel">
-            <p>Paragraph</p>
+            <div class="content">
+                <h1>Projects</h1>
+
+                <a href="https://fusionfall.fandom.com/wiki/FusionFall_RE:SPAWN"><h2>FusionFall Re:Spawn</h2></a>
+                <p><i>“FusionFall RE:SPAWN is an unofficially fan-produced, non-profit remake of the 2009 title Cartoon Network Universe: FusionFall, loosely inspired by the fangame FusionFall Legacy. In this title, we hope to bring the game’s original concept into fruition using every trick in the book, elevating the story and gameplay for a new, more advanced generation of animation fans. From ‘90s kids to ‘20s kids, even to the kids at heart, we aim to put out a product that appeals to this game’s resilient community first and foremost. We promise to use our game as a platform for inclusivity, diversity, quality, and tons of fun through new gameplay styles and franchises to explore."</i><br>
+                <br>
+                The game was using the Unity engine. I worked on scripts required for the game along with others while also helping with informational resources being proficient in searching thru the Unity scripting docs</p>
+                <p>!Ask for permission to use screenshots and/or videos!</p>
+                    
+                <a href= "https://github.com/sopyb/Game-bot"><h2>Game-bot</h2></a>
+                <p>A discord bot to play games directly in your chat writen in javascript running under <u>Node.js</u>.<br>
+                <br>
+                <b><u>Work in progress</u></b> - Play and level up to unlock special profile card backgrounds, titles and badges to have the most unique card out there.<br>
+                The only games currently available to play are 2048 and Minesweeper with hopefully more to come.</p>
+                <p>!Rememember to add screenshots!</p>
+
+                <a href= "https://github.com/sopyb/Discord_TV"><h2>Disocrd TV</h2></a>
+                <p>There is no Discord app for Android TV so I decided to make my own worked out the QR authentification process by looking at the minified javascript from the desktop client and ported the code over to kotlin and implemented it into the app, before realizing the app would be breaking Discord's ToS.</p>
+                <p>!Rememember to add screenshots!</p>
+
+                <a href= "https://github.com/sopyb/sopyb.github.io"><h2>This portofolio website</h2></a>
+                <p>HTML and CSS, the first website I tried making in about 3 years. I wanted to make something unique so I though noone ever used only hex codes that are words for a website before so I went with the following:</p>
+                <ul>
+                    <li>Ace: #ACE</li>
+                    <li>Ice: #1CE</li>
+                    <li>Looted: #10073D</li>
+                    <li>Sea: #53A</li>
+                    <li>Salted: #5A17ED</li>
+                </ul>
+            </div>
         </div>
     </body>
 </html>
