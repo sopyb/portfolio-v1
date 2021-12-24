@@ -7,6 +7,11 @@
         href="https://fonts.googleapis.com/css2?family=Robotot+Slab&family=Kanit">
 
         <style>
+            /* Resources used
+            *
+            * https://css-tricks.com/the-shapes-of-css/
+            */
+
             :root {
                 --darkBlue: #10073D; /*Looted*/
                 --blue: #007;  /*James Bond*/
@@ -15,17 +20,95 @@
                 --white: #ACE; /*Ace*/
             }
 
+            @keyframes floating {
+                from { transform: translate(0,  0vh); }
+                60%  { transform: translate(0, 5vh); }
+                to   { transform: translate(0, -0vh); }    
+            }
+
             body {
                 margin: 0%;
                 font-family: 'Roboto Slab', sans-serif;
             }
 
+            .diamond {
+                width: 0;
+                height: 0;
+                border: 10vw solid transparent;
+                border-bottom-color: var(--blue);
+                position: relative;
+                top: -10vw;
+            }
+
+            .diamond:after {
+                content: '';
+                position: absolute;
+                left: -10vw;
+                top: 10vw;
+                width: 0;
+                height: 0;
+                border: 10vw solid transparent;
+                border-top-color: var(--blue);
+            }
+
+            .center {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .float {
+                position: absolute;
+                animation-name: floating;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+            }
+
+            .pacman {
+                width: 0px;
+                height: 0px;
+                border-right: 15vw solid transparent;
+                border-top: 15vw solid var(--blue);
+                border-left: 15vw solid var(--blue);
+                border-bottom: 15vw solid var(--blue);
+                border-top-left-radius: 15vw;
+                border-top-right-radius: 15vw;
+                border-bottom-left-radius: 15vw;
+                border-bottom-right-radius: 15vw;
+            }
+
             .panel {
-                background-color: var(--blue);
                 position: relative;
                 width: 100vw;
                 height: 100vh;
                 max-width: 100%;
+                overflow: hidden;
+            }
+
+            .shape {
+                opacity: 30%;
+            }
+
+            #shape1 {
+                top: 15vh;
+                left: 5vw
+            }
+
+            #shape2 {
+                top: 5vh;
+                left: 35vw
+            }
+
+            #shape3 {
+                top: 5vh;
+                left: 60vw
+            }
+
+            #shape4 {
+                top: 5vh;
+                left: 85vw
             }
 
             #topPanel {
@@ -45,19 +128,18 @@
             #topPanel p {
                 color: var(--white);
             }
-
-            #center {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
         </style>
     </head>
 
     <body>
         <div class="panel" id="topPanel">
-            <div id="center">
+            <div>
+                <div class="shape float pacman" id="shape1"></div>
+                <div class="shape float diamond" id="shape2"></div>
+                <div class="shape float diamond" id="shape3"></div>
+                <div class="shape float diamond" id="shape4"></div>
+            </div>
+            <div class="center">
                 <h1>Title</h1>
                 <h2>Sub-Title</h2>
                 <p>Paragraph</p>
