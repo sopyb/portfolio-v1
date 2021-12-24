@@ -3,27 +3,67 @@
     <head>
         <title>Coming soon...</title>
 
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Robotot+Slab&family=Kanit">
+
         <style>
-            body {
-                background-color: #10073D;
+            :root {
+                --blurple: #5A17ED;
+                --darkBlue: #10073D;
+                --lightblue: #1CE;
+                --white: #ACE;
             }
 
-            #coming-soon {
+            body {
+                margin: 0%;
+                font-family: 'Roboto Slab', sans-serif;
+            }
+
+            .panel {
+                position: relative;
+                width: 100vw;
+                height: 100vh;
+                max-width: 100%;
+            }
+
+            #topPanel {
+                background-color: var(--darkBlue);
+                align-items: center;
+            }
+
+            #topPanel h1 {
+                font-family: 'Kanit', sans-serif;
+                color: var(--lightblue);
+            }
+
+            #topPanel h2 {
+                color: var(--blurple);
+            }
+
+            #topPanel p {
+                color: var(--white);
+            }
+
+            #center {
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
-
-            #coming-soon p {
-                color: #1ce
-            }
         </style>
     </head>
 
     <body>
-        <div id="coming-soon">
-            <p>Site incoming... I swear</p>
+        <div class="panel" id="topPanel">
+            <div id="center">
+                <h1>Title</h1>
+                <h2>Sub-Title</h2>
+                <p>Paragraph</p>
+            </div>
+        </div>
+
+        <div class="panel">
+
         </div>
     </body>
 </html>
