@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Coming soon...</title>
 
         <link rel="stylesheet"
@@ -23,7 +24,7 @@
             @keyframes floating {
                 from { transform: translate(0,  0vh); }
                 60%  { transform: translate(0, 5vh); }
-                to   { transform: translate(0, -0vh); }    
+                to   { transform: translate(0, 0vh); }    
             }
 
             body {
@@ -31,23 +32,35 @@
                 font-family: 'Roboto Slab', sans-serif;
             }
 
+            h1 {
+                font-family: 'Kanit', sans-serif;
+                color: var(--lightblue);
+            }
+
+            h2 {
+                color: var(--blurple);
+            }
+
+            p {
+                color: var(--white);
+            }
+
             .diamond {
                 width: 0;
                 height: 0;
-                border: 10vw solid transparent;
+                border: 15vw solid transparent;
                 border-bottom-color: var(--blue);
                 position: relative;
-                top: -10vw;
             }
 
             .diamond:after {
                 content: '';
                 position: absolute;
-                left: -10vw;
-                top: 10vw;
+                left: -15vw;
+                top: 15vw;
                 width: 0;
                 height: 0;
-                border: 10vw solid transparent;
+                border: 15vw solid transparent;
                 border-top-color: var(--blue);
             }
 
@@ -58,25 +71,57 @@
                 transform: translate(-50%, -50%);
             }
 
-            .float {
+            .centery {
                 position: absolute;
+                top: 50%;
+                left: 0%;
+                transform: translate(0%, -50%);
+            }
+
+            .float {
                 animation-name: floating;
                 animation-duration: 10s;
                 animation-iteration-count: infinite;
                 animation-timing-function: ease-in-out;
             }
 
+            .heart {
+                position: relative;
+                width: 20vw;
+                height: 18vw;
+            }
+
+            .heart:before,
+            .heart:after {
+                position: absolute;
+                content: "";
+                left: 10vw;
+                top: 0;
+                width: 10vw;
+                height: 16vw;
+                background: var(--blue);
+                border-radius: 10vw 10vw 0 0;
+                transform: rotate(-45deg);
+                transform-origin: 0 100%;
+            }
+
+            .heart:after {
+                left: 0;
+                transform: rotate(45deg);
+                transform-origin: 100% 100%;
+            }
+  
             .pacman {
                 width: 0px;
                 height: 0px;
-                border-right: 15vw solid transparent;
-                border-top: 15vw solid var(--blue);
-                border-left: 15vw solid var(--blue);
-                border-bottom: 15vw solid var(--blue);
-                border-top-left-radius: 15vw;
-                border-top-right-radius: 15vw;
-                border-bottom-left-radius: 15vw;
-                border-bottom-right-radius: 15vw;
+                border-right: 20vw solid transparent;
+                border-top: 20vw solid var(--blue);
+                border-left: 20vw solid var(--blue);
+                border-bottom: 20vw solid var(--blue);
+                border-top-left-radius: 20vw;
+                border-top-right-radius: 20vw;
+                border-bottom-left-radius: 20vw;
+                border-bottom-right-radius: 20vw;
             }
 
             .panel {
@@ -85,30 +130,27 @@
                 height: 100vh;
                 max-width: 100%;
                 overflow: hidden;
+                object-position: 50% 50%;
             }
 
             .shape {
+                position: absolute;
                 opacity: 30%;
             }
 
             #shape1 {
-                top: 15vh;
-                left: 5vw
+                top: 5%;
+                left: 5%;
             }
 
             #shape2 {
-                top: 5vh;
-                left: 35vw
+                margin-top: -10%;
+                right: 5%;
             }
 
             #shape3 {
-                top: 5vh;
-                left: 60vw
-            }
-
-            #shape4 {
-                top: 5vh;
-                left: 85vw
+                top: 70%;
+                left: 55%;
             }
 
             #topPanel {
@@ -117,37 +159,31 @@
             }
 
             #topPanel h1 {
-                font-family: 'Kanit', sans-serif;
-                color: var(--lightblue);
+                font-size: 400%;
             }
 
-            #topPanel h2 {
-                color: var(--blurple);
-            }
-
-            #topPanel p {
-                color: var(--white);
+            #topPanel h1,
+            #topPanel h2{
+                margin-top: 0px;
+                margin-bottom: 0px;
             }
         </style>
     </head>
 
     <body>
         <div class="panel" id="topPanel">
-            <div>
-                <div class="shape float pacman" id="shape1"></div>
-                <div class="shape float diamond" id="shape2"></div>
-                <div class="shape float diamond" id="shape3"></div>
-                <div class="shape float diamond" id="shape4"></div>
-            </div>
-            <div class="center">
-                <h1>Title</h1>
-                <h2>Sub-Title</h2>
-                <p>Paragraph</p>
+            <div class="shape float pacman" id="shape1"></div>
+            <div class="shape float diamond" id="shape2"></div>
+            <div class="shape float heart" id="shape3"></div>
+
+            <div class="center" >
+                <h1 align="left">Welcome... </h1>
+                <h2 align="right">to my portofolio?</h2>
             </div>
         </div>
 
         <div class="panel">
-
+            <p>Paragraph</p>
         </div>
     </body>
 </html>
