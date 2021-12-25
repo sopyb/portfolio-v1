@@ -61,23 +61,8 @@
                 font-weight: 600;
             }
 
-            .diamond {
-                width: 0;
-                height: 0;
-                border: 15vw solid transparent;
-                border-bottom-color: var(--purple);
-                position: relative;
-            }
-
-            .diamond:after {
-                content: '';
-                position: absolute;
-                left: -15vw;
-                top: 15vw;
-                width: 0;
-                height: 0;
-                border: 15vw solid transparent;
-                border-top-color: var(--purple);
+            .blurple {
+                color: var(--blurple)
             }
 
             .center {
@@ -96,6 +81,25 @@
 
             .content {
                 padding: 10%;
+            }
+            
+            .diamond {
+                width: 0;
+                height: 0;
+                border: 15vw solid transparent;
+                border-bottom-color: var(--purple);
+                position: relative;
+            }
+
+            .diamond:after {
+                content: '';
+                position: absolute;
+                left: -15vw;
+                top: 15vw;
+                width: 0;
+                height: 0;
+                border: 15vw solid transparent;
+                border-top-color: var(--purple);
             }
 
             .float {
@@ -182,10 +186,6 @@
 
             .socialIcon {
                 filter: invert(76%) sepia(42%) saturate(227%) hue-rotate(171deg) brightness(97%) contrast(93%);
-            }
-
-            #credits {
-                color: var(--blurple)
             }
 
             #shape1 {
@@ -310,7 +310,7 @@
                         <img class="socialIcon" src="https://raw.githubusercontent.com/twbs/icons/main/icons/github.svg" width="16px" height="16px">
                         Github</p></a>
                 </div>
-                <p align="right" id="credits">Made by Sopy</p>
+                <p align="right">Made by <span class="blurpurple">Sopy</span></p>
                 <p align="right">Using <a href="https://github.com/twbs/icons">twbs/icons</a>, <a href="https://github.com/primer/octicons">primer/octicons</a> and <a href="https://www.magictoolbox.com/magicscroll/">Magic Scroll</a></p>
                 
             </div>
