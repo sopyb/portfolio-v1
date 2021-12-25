@@ -32,6 +32,8 @@
 
             a {
                 text-decoration: none;
+                color:var(--blurple);
+                white-space: nowrap;
             }
 
             body {
@@ -103,6 +105,19 @@
                 animation-timing-function: ease-in-out;
             }
 
+            .footer {
+                position: relative;
+                width: 100vw;
+                max-width: 100%;
+                overflow: hidden;
+                background-color: var(--darkBlue);
+            }
+
+            .footerContent {
+                padding: 2% 15%;
+
+            }
+
             .heart {
                 position: relative;
                 width: 20vw;
@@ -148,13 +163,29 @@
                 min-height: 100vh;
                 max-width: 100%;
                 overflow: hidden;
-                object-position: 50% 50%;
                 background-color: var(--purple);
             }
 
             .shape {
                 position: absolute;
                 opacity: 30%;
+            }
+
+            .socials {
+                max-width: 50%;
+            }
+
+            .socialsEntry {
+                float: left;
+                padding-right: 16px;
+            }
+
+            .socialIcon {
+                filter: invert(76%) sepia(42%) saturate(227%) hue-rotate(171deg) brightness(97%) contrast(93%);
+            }
+
+            #credits {
+                color: var(--blurple)
             }
 
             #shape1 {
@@ -264,6 +295,24 @@
                     <li>Sea: #53A</li>
                     <li>Salted: #5A17ED</li>
                 </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footerContent">
+                <h1>Find me...</h1>
+                <div class="socials">
+                    <a class="socialsEntry" href="mailto:sopygg@gmail.com"><p>
+                        <img class="socialIcon" src="https://raw.githubusercontent.com/primer/octicons/main/icons/mail-16.svg" width="16px" height="16px">
+                        Email</p></a>
+
+                    <a class="socialsEntry" href="https://github.sopyb.com"><p>
+                        <img class="socialIcon" src="https://raw.githubusercontent.com/twbs/icons/main/icons/github.svg" width="16px" height="16px">
+                        Github</p></a>
+                </div>
+                <p align="right" id="credits">Made by Sopy</p>
+                <p align="right">Using <a href="https://github.com/twbs/icons">twbs/icons</a>, <a href="https://github.com/primer/octicons">primer/octicons</a> and <a href="https://www.magictoolbox.com/magicscroll/">Magic Scroll</a></p>
+                
             </div>
         </div>
     </body>
