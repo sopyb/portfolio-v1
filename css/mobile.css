@@ -1,0 +1,80 @@
+/* Resources used
+*
+* https://css-tricks.com/the-shapes-of-css/
+*/
+
+@media only screen and (max-width: 800px) {
+    .diamond {
+        width: 0;
+        height: 0;
+        border: 15vh solid transparent;
+        border-bottom-color: var(--purple);
+        position: relative;
+    }
+
+    .diamond:after {
+        content: '';
+        position: absolute;
+        left: -15vh;
+        top: 15vh;
+        width: 0;
+        height: 0;
+        border: 15vh solid transparent;
+        border-top-color: var(--purple);
+    }
+
+    .heart {
+        position: relative;
+        width: 40vh;
+        height: 36vh;
+    }
+    
+    .heart:before,
+    .heart:after {
+        position: absolute;
+        content: "";
+        left: 20vh;
+        top: 0;
+        width: 20vh;
+        height: 32vh;
+        background: var(--purple);
+        border-radius: 20vh 20vh 0 0;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+    }
+    
+    .heart:after {
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+    }
+    
+
+    .pacman {
+        width: 0;
+        height: 0;
+        border-right: 20vh solid transparent;
+        border-top: 20vh solid var(--purple);
+        border-left: 20vh solid var(--purple);
+        border-bottom: 20vh solid var(--purple);
+        border-top-left-radius: 20vh;
+        border-top-right-radius: 20vh;
+        border-bottom-left-radius: 20vh;
+        border-bottom-right-radius: 20vh;
+    }
+
+    #shape1 {
+        top: 5%;
+        left: 5%;
+    }
+
+    #shape2 {
+        margin-top: 50%;
+        left: 60%;
+    }
+
+    #shape3 {
+        top: 20%;
+        left: 5%;
+    }
+}

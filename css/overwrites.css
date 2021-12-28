@@ -1,0 +1,13 @@
+/* magicscroll overwrites */
+
+div.mcs-bullet {
+    background-color: var(--white);
+}
+
+div.mcs-bullet.active {
+    border-color: var(--darkBlue);
+}
+
+div.mcs-bullet:hover {
+    background-color: var(--darkBlue);
+}
