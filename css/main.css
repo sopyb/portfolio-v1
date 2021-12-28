@@ -182,6 +182,8 @@ a.socialsEntry {
 
 .socialIcon {
     filter: invert(76%) sepia(42%) saturate(227%) hue-rotate(171deg) brightness(97%) contrast(93%);
+    width: 1em;
+    height: 1em;
 }
 
 #shape1 {

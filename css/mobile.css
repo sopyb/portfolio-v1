@@ -3,7 +3,18 @@
 * https://css-tricks.com/the-shapes-of-css/
 */
 
-@media only screen and (max-width: 800px) {
+@media (hover: none) {
+    :root {
+        font-size: 250%;
+    }
+}
+
+@media (hover: none), 
+    screen and (max-width: 800px) {
+    h2 {
+        padding-top: 10%;
+    }
+    
     .diamond {
         width: 0;
         height: 0;
@@ -21,6 +32,23 @@
         height: 0;
         border: 15vh solid transparent;
         border-top-color: var(--purple);
+    }
+
+    .socials {
+        max-width: 100%;
+        width: 100%;
+        float: none;
+        display: block;
+    }
+
+    .socialsEntry {
+        float: none;
+        padding-right: 16px;
+    }
+
+    .socialsEntry p {
+        margin-top: 0%;
+        margin-bottom: 0%;
     }
 
     .heart {
