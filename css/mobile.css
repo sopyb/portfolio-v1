@@ -12,7 +12,7 @@
 @media (hover: none), 
     screen and (max-width: 800px) {
     h2 {
-        padding-top: 10%;
+        margin-top: 10%;
     }
     
     .diamond {
@@ -104,5 +104,10 @@
     #shape3 {
         top: 20%;
         left: 5%;
+    }
+
+    #topPanel h2 {
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
